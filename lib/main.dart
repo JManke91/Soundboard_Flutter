@@ -48,54 +48,120 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.grey,
         appBar: AppBar(
           centerTitle: true,
           title: Text('Soundboard'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                RaisedButton(
-                    onPressed: () {
-                      kaffeeButtonPressed();
-                    },
-                    child: Text('Andreas Kaffee')),
-                RaisedButton(
-                    onPressed: () {
-                      haltStopButtonPressed();
-                    },
-                    child: Text('Halt STOP')),
+                MaterialButton(
+                  onPressed: () {
+                    kaffeeButtonPressed();
+                  },
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  child: Column(
+                    children: [
+                      Icon(
+                        Icons.play_arrow_outlined,
+                        size: 24,
+                      ),
+                      Text('Kaffee'),
+                    ],
+                  ),
+                  padding: EdgeInsets.all(16),
+                  shape: CircleBorder(),
+                ),
+                MaterialButton(
+                  onPressed: () {
+                    haltStopButtonPressed();
+                  },
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  child: Column(
+                    children: [
+                      Icon(
+                        Icons.play_arrow_outlined,
+                        size: 24,
+                      ),
+                      Text('STOP'),
+                    ],
+                  ),
+                  padding: EdgeInsets.all(16),
+                  shape: CircleBorder(),
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                RaisedButton(
-                    onPressed: () {
-                      quatschButtonPressed();
-                    },
-                    child: Text('Quatsch')),
-                RaisedButton(
-                    onPressed: () {
-                      vielleichtWahrButtonPressed();
-                    },
-                    child: Text('Vielleicht wahr')),
+                MaterialButton(
+                  onPressed: () {
+                    quatschButtonPressed();
+                  },
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  child: Column(
+                    children: [
+                      Icon(
+                        Icons.play_arrow_outlined,
+                        size: 24,
+                      ),
+                      Text('Quatsch'),
+                    ],
+                  ),
+                  padding: EdgeInsets.all(16),
+                  shape: CircleBorder(),
+                ),
+
+                MaterialButton(
+                  onPressed: () {
+                    vielleichtWahrButtonPressed();
+                  },
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  child: Column(
+                    children: [
+                      Icon(
+                        Icons.play_arrow_outlined,
+                        size: 24,
+                      ),
+                      Text('Vielleicht'),
+                    ],
+                  ),
+                  padding: EdgeInsets.all(16),
+                  shape: CircleBorder(),
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                RaisedButton(
+                MaterialButton(
                   onPressed: () {
                     freiErfundenButtonPressed();
                   },
-                  child: Text('Frei erfunden'),
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  child: Column(
+                    children: [
+                      Icon(
+                        Icons.play_arrow_outlined,
+                        size: 24,
+                      ),
+                      Text('Erfunden'),
+                    ],
+                  ),
+                  padding: EdgeInsets.all(16),
+                  shape: CircleBorder(),
                 ),
               ],
             )
